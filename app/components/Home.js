@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
 
 export default class Home extends Component
 {
@@ -6,6 +7,9 @@ export default class Home extends Component
     return (
       <div className="my-class">
         { this.props.message || '' }
+        <RaisedButton
+          label="Test Material Ui"
+        />
       </div>
     )
   }
