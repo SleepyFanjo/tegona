@@ -1,12 +1,21 @@
 import React from 'react'
+import { RootElement } from 'react-server'
+import { RootProvider } from 'react-server-redux'
 import HomeContainer from '../app/containers/HomeContainer'
+import store from '../app/stores/configureStore'
 
 // styles
 import '../styles/main.scss'
 
-export default class SimplePage {
+export default class Home {
   getElements () {
-    return <HomeContainer />
+    return [
+      <RootProvider store={store}>
+        <RootElement key={0}>
+          <HomeContainer />
+        </RootElement>
+      </RootProvider>
+    ]
   }
 
   getMetaTags () {

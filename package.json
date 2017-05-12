@@ -18,8 +18,11 @@
     "react-redux": "^5.0.4",
     "react-server": "^0.6.4",
     "react-server-cli": "^0.6.4",
+    "react-server-redux": "^0.6.3",
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
     "superagent": "1.8.4"
   },
   "devDependencies": {
