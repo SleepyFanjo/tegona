@@ -1,0 +1,41 @@
+{
+  "name": "project-report",
+  "version": "0.0.1",
+  "description": "A react-server instance",
+  "main": "HelloWorld.js",
+  "scripts": {
+    "start": "react-server start",
+    "lint": "eslint test.js pages",
+    "test": "npm run lint && nsp check && ava test.js"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babel-preset-react-server": "^0.6.0",
+    "babel-runtime": "^6.6.1",
+    "material-ui": "^0.18.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.4",
+    "react-server": "^0.6.4",
+    "react-server-cli": "^0.6.4",
+    "react-server-redux": "^0.6.3",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "superagent": "1.8.4"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.11.1",
+    "eslint-plugin-react": "6.7.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "nsp": "^2.3.3",
+    "sass-loader": "^6.0.5",
+    "standard": "^10.0.2",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1"
+  }
+}
