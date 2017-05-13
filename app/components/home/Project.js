@@ -12,7 +12,7 @@ import Calendar from 'material-ui/svg-icons/action/perm-contact-calendar'
 import Paper from 'material-ui/Paper'
 
 // colors
-import {redA400, greenA700, blue500 } from 'material-ui/styles/colors'
+import { redA400, greenA700, blue500 } from 'material-ui/styles/colors'
 
 // constants
 import * as appConst from '../../utils/constants'
@@ -20,6 +20,8 @@ import * as appConst from '../../utils/constants'
 // components
 import Meetings from './Meetings'
 import MeetingReport from './MeetingReport'
+
+const dateFormat = 'YYYY-MM-DD HH:mm:ss.SSS'
 
 export default class Project extends Component {
   static propTypes = {
@@ -34,21 +36,22 @@ export default class Project extends Component {
 
     const filtered = meetings.filter((meeting) => {
       if (filter === appConst.FUTURE_MEETINGS) {
-        return moment().isBefore(meeting.date)
+        return moment().isBefore(moment(meeting.date))
       }
 
       return moment().isAfter(meeting.date)
     })
 
     return filtered.sort((meeting1, meeting2) => {
+
       let score = 0
-      if (moment(meeting1).isBefore(meeting2)) {
+      if (moment(meeting1.date).isBefore(meeting2.date)) {
         score = 1
-      } else if (moment(meeting1).isAfter(meeting2)) {
+      } else if (moment(meeting1.date).isAfter(meeting2.date)) {
         score = -1
       }
 
-      if (filter === appConst.PAST_MEETINGS) {
+      if (filter === appConst.FUTURE_MEETINGS) {
         score = -score
       }
 

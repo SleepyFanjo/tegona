@@ -80,37 +80,42 @@ export default class Meetings extends Component {
       ? {primary: 'Prochaine réunion', secondary: 'Réunions suivantes'}
       : {primary: 'Dernière réunion', secondary: 'Réunions précédentes'}
 
-
     return (
       <div className="project-meetings">
         <h3 className="project-meeting-category-title">{wording.primary}</h3>
         <MeetingCard card={primary} selectMeeting={this.props.selectMeeting} />
-        <h3 className="project-meeting-category-title">{wording.secondary}</h3>
-        <GridList
-          cols={this.state.cols}
-          cellHeight="auto"
-          padding={2}
-        >
-          {
-            others.map((meeting, index) => {
-              let size = 1
+        {
+          others && others.length > 0
+            ? <div>
+              <h3 className="project-meeting-category-title">{wording.secondary}</h3>
+              <GridList
+                cols={this.state.cols}
+                cellHeight="auto"
+                padding={2}
+              >
+                {
+                  others.map((meeting, index) => {
+                    let size = 1
 
-              if (index === 0 && others.length % 2 === 1) {
-                size = this.state.cols
-              }
+                    if (index === 0 && others.length % 2 === 1) {
+                      size = this.state.cols
+                    }
 
-              return (
-                <GridTile
-                  key={index}
-                  cols={size}
-                  rows={size}
-                >
-                  <MeetingCard card={meeting} selectMeeting={this.props.selectMeeting} />
-                </GridTile>
-              )
-            })
-          }
-        </GridList>
+                    return (
+                      <GridTile
+                        key={index}
+                        cols={size}
+                        rows={size}
+                      >
+                        <MeetingCard card={meeting} selectMeeting={this.props.selectMeeting} />
+                      </GridTile>
+                    )
+                  })
+                }
+              </GridList>
+            </div>
+            : null
+        }
       </div>
     )
   }
