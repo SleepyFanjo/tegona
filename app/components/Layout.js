@@ -8,10 +8,13 @@ import MenuItem from 'material-ui/MenuItem'
 import Previous from 'material-ui/svg-icons/action/check-circle'
 import Future from 'material-ui/svg-icons/action/query-builder'
 
+// constants
+import * as appConst from '../utils/constants'
+
 const Layout = (props) => (
   <div className="container">
     <AppBar
-      title="Reunions passées"
+      title={props.filter}
       iconElementRight={<h1 className="title">Project Reports</h1>}
       iconStyleRight={{margin: 0}}
       onLeftIconButtonTouchTap={props.toggleDrawer}
@@ -25,8 +28,8 @@ const Layout = (props) => (
         boxShadow: 'none'
       }}
     >
-      <MenuItem focusState="focused" primaryText="Reunions passées" leftIcon={<Previous />} />
-      <MenuItem primaryText="Reunions à venir" leftIcon={<Future />} />
+      <MenuItem primaryText={appConst.PAST_MEETINGS} leftIcon={<Previous />} onTouchTap={() => props.updateFilter(appConst.PAST_MEETINGS)} />
+      <MenuItem primaryText={appConst.FUTURE_MEETINGS} leftIcon={<Future />} onTouchTap={() => props.updateFilter(appConst.FUTURE_MEETINGS)}/>
     </Drawer>
     {
       props.children

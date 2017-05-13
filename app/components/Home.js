@@ -18,7 +18,12 @@ export default class Home extends Component
 
   render () {
     return (
-      <Layout drawer={this.props.drawer} toggleDrawer={this.props.homeActions.toggleDrawer}>
+      <Layout
+        drawer={this.props.drawer}
+        toggleDrawer={this.props.homeActions.toggleDrawer}
+        filter={this.props.filter}
+        updateFilter={this.props.homeActions.updateFilter}
+      >
         {
           this.props.loading
             ? <div className="centered-indicator"><RefreshIndicator size={100} left={10} top={0} status="loading" /></div>

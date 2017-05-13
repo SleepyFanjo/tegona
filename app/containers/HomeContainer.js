@@ -38,10 +38,7 @@ class HomeContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  drawer: state.home.drawer,
-  loading: state.home.loading,
-  error: state.home.error,
-  project: state.home.project
+  ...state.home
 })
 
 const mapActionsToProps = (dispatch) => ({
