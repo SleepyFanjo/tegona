@@ -1,7 +1,7 @@
 .project {
   &-content-wrapper {
     width: 100%;
-    padding-top: 20px;
+    padding: 20px 6px;
 
     @media (min-width: $tablet) {
       width: 500px;
@@ -18,5 +18,10 @@
 
   &-meeting-missing {
     padding: 20px 10px;
+  }
+
+  &-meeting-location {
+    margin-bottom: 10px;
+    color: $secondary-text-color;
   }
 }

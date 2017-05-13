@@ -21,6 +21,7 @@ html, body {
   height: calc(100% - 66px) !important;
   top: 66px !important;
   box-shadow: none !important;
+  position: absolute !important;
 
   @media (min-width: $desktop) {
     background: transparent !important;
