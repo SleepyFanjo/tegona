@@ -1,3 +1,31 @@
 html, body {
   background-color: $background-color;
+  margin: 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px;
+  padding-top: 0px;
+  letter-spacing: 0px;
+  font-size: 24px;
+  font-weight: 400;
+  color: $white;
+  height: 64px;
+  line-height: 64px;
+  flex: 1 1 0%;
+}
+
+.centered-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -($spinner-size / 2);
+  margin-top: -($spinner-size / 2);
 }

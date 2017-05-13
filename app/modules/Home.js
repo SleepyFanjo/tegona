@@ -6,8 +6,10 @@ import data from '../../api/data.json'
 const API_DATA_LOADING = 'home/API_DATA_LOADING'
 const API_DATA_SUCCESS = 'home/API_DATA_SUCCESS'
 const API_DATA_ERROR = 'home/API_DATA_ERROR'
+const TOGGLE_DRAWER = 'home/TOGGLE_DRAWER'
 
 const defaultState = {
+  drawer: true,
   project: null,
   loading: false,
   error: null
@@ -32,8 +34,21 @@ export default createReducer(defaultState, {
       error: action.error,
       loading: false
     })
+  },
+  [TOGGLE_DRAWER]: (state, action) => {
+    return Object.assign({}, state, {
+      drawer: !state.drawer
+    })
   }
 })
+
+export function toggleDrawer () {
+  return (dispatch) => {
+    dispatch({
+      type: TOGGLE_DRAWER
+    })
+  }
+}
 
 export function loadApiData () {
   return (dispatch) => {
@@ -42,9 +57,9 @@ export function loadApiData () {
     })
 
     const p1 = new Promise(
-      (res, rej) => {
+      (resolve, reject) => {
         setTimeout(() => {
-          res(data)
+          resolve(data)
         }, 1000)
       }
     )

@@ -8,11 +8,17 @@ import store from '../app/stores/configureStore'
 import '../styles/main.scss'
 
 export default class Home {
+  handleRoute (next) {
+    this.userAgent = this.getRequest().getHttpHeader('user-agent')
+
+    return next()
+  }
+
   getElements () {
     return [
       <RootProvider store={store}>
         <RootElement>
-          <HomeContainer />
+          <HomeContainer userAgent={this.userAgent} />
         </RootElement>
       </RootProvider>
     ]
