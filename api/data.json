@@ -1,0 +1,52 @@
+{
+  "id": "033283a2-b9a3-463c-ab7c-8066d4f1e210",
+  "name": "My Project",
+  "date": "2017-05-12",
+  "providere": "Suncorp Stadium",
+  "description": "Ce projet est un test technique utilisant React et Redux comme technologies principales",
+  "status": "en cours",
+  "meetings": [
+    {
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2017-04-12T18:25:43.511Z",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "L'objet de cette première réunion est de présenter et de définir le projet",
+          "children": []
+        },
+        {
+          "type": "info",
+          "content": "Geoffroy présente le projet et apporte les specifications techniques",
+          "children": [
+            {
+              "type": "question",
+              "content": "Quelle est la deadline de ce projet ?"
+            }
+          ]
+        },
+        {
+          "type": "info",
+          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+        }
+      ]
+    }
+  ]
+}

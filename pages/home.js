@@ -11,7 +11,7 @@ export default class Home {
   getElements () {
     return [
       <RootProvider store={store}>
-        <RootElement key={0}>
+        <RootElement>
           <HomeContainer />
         </RootElement>
       </RootProvider>
