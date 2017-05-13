@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
-.my-class {
-  color: red;
-}
+@import 'variables';
+@import 'layout';
+
+// Pages
+@import 'pages/project-view';

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // material-ui dependencies
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 // Redux dependencies
 import { connect } from 'react-redux'
@@ -10,27 +11,34 @@ import { bindActionCreators } from 'redux'
 import * as homeActions from '../modules/Home'
 
 // Components
-import Home from '../components/Home'
+import Home from '../components/home/Home'
 
-class HomeContainer extends Component
-{
+class HomeContainer extends Component {
+  componentWillMount () {
+    // Required by material-ui to handle touch / tap on mobile
+    injectTapEventPlugin()
+  }
+
   render () {
+    const muiTheme = getMuiTheme({}, {
+      userAgent: this.props.userAgent
+    })
+
     return (
-      <MuiThemeProvider>
-        <Home message={this.props.message} actions={this.props.homeActions} />
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <Home {...this.props} />
       </MuiThemeProvider>
     )
   }
 
   componentDidMount () {
-
-    // Required by material-ui to handle touch / tap on mobile
-    injectTapEventPlugin()
+    // This simulate a client side API Call
+    this.props.homeActions.loadApiData(this.props.projectData)
   }
 }
 
 const mapStateToProps = (state) => ({
-  message: state.home.hello
+  ...state.home
 })
 
 const mapActionsToProps = (dispatch) => ({

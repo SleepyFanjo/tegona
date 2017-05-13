@@ -1,0 +1,227 @@
+{
+  "id": "033283a2-b9a3-463c-ab7c-8066d4f1e210",
+  "name": "My Project",
+  "date": "2017-05-12",
+  "provider": "Suncorp Stadium",
+  "description": "Ce projet est un test technique utilisant React et Redux comme technologies principales",
+  "status": "En cours",
+  "meetings": [
+    {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a350",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2018-04-12T18:25:43.511Z",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "L'objet de cette réunion est de présenter et de définir le projet"
+        },
+        {
+          "type": "info",
+          "content": "Geoffroy présente le projet et apporte les specifications techniques",
+          "children": [
+            {
+              "type": "question",
+              "content": "Quelle est la deadline de ce projet ?",
+              "children": [
+                {
+                  "type": "decision",
+                  "content": "Lundi"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "info",
+          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+        }
+      ]
+    },
+    {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a351",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2018-04-13T18:25:43.511Z",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "L'objet de cette première réunion est de présenter et de définir le projet",
+          "children": []
+        },
+        {
+          "type": "info",
+          "content": "Geoffroy présente le projet et apporte les specifications techniques",
+          "children": [
+            {
+              "type": "question",
+              "content": "Quelle est la deadline de ce projet ?"
+            }
+          ]
+        },
+        {
+          "type": "info",
+          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+        }
+      ]
+    },
+    {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a352",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2018-04-14T18:25:43.511Z",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "L'objet de cette première réunion est de présenter et de définir le projet"
+        },
+        {
+          "type": "info",
+          "content": "Geoffroy présente le projet et apporte les specifications techniques",
+          "children": [
+            {
+              "type": "question",
+              "content": "Quelle est la deadline de ce projet ?"
+            }
+          ]
+        },
+        {
+          "type": "info",
+          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+        }
+      ]
+    },
+    {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a353",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2018-04-15T18:25:43.511Z",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "L'objet de cette première réunion est de présenter et de définir le projet"
+        },
+        {
+          "type": "info",
+          "content": "Geoffroy présente le projet et apporte les specifications techniques",
+          "children": [
+            {
+              "type": "question",
+              "content": "Quelle est la deadline de ce projet ?"
+            }
+          ]
+        },
+        {
+          "type": "info",
+          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+        }
+      ]
+    },
+    {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a354",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2018-04-16T18:25:43.511Z",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "L'objet de cette première réunion est de présenter et de définir le projet"
+        },
+        {
+          "type": "info",
+          "content": "Geoffroy présente le projet et apporte les specifications techniques",
+          "children": [
+            {
+              "type": "question",
+              "content": "Quelle est la deadline de ce projet ?"
+            }
+          ]
+        },
+        {
+          "type": "info",
+          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+        }
+      ]
+    }
+  ]
+}
