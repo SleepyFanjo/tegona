@@ -26,12 +26,15 @@ export default class Home {
     ]
   }
 
+  getTitle () {
+    return 'Project Reports'
+  }
+
   getMetaTags () {
     return [
       {charset: 'utf8'},
       {'http-equiv': 'x-ua-compatible', 'content': 'ie=edge'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {name: 'title', content: 'Project Report'},
       {name: 'description', content: 'Project report website'},
       {name: 'generator', content: 'React Server'}
     ]

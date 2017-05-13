@@ -15,9 +15,7 @@ import * as appConst from '../../utils/constants'
 const Layout = (props) => (
   <div className="container">
     <AppBar
-      title={props.filter}
-      iconElementRight={<h1 className="title">Project Reports</h1>}
-      iconStyleRight={{margin: 0}}
+      title="Project Reports"
       onLeftIconButtonTouchTap={props.toggleDrawer}
     />
     <Drawer

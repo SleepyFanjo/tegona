@@ -3,7 +3,7 @@
   "name": "My Project",
   "date": "2017-05-12",
   "provider": "Suncorp Stadium",
-  "description": "Ce projet est un test technique utilisant React et Redux comme technologies principales",
+  "description": "Ce projet est un test technique utilisant React et Redux comme technologies principales. Il permet d'afficher des rapports de réunion d'un projet.",
   "status": "En cours",
   "meetings": [
     {
@@ -14,7 +14,7 @@
         "city": "Milton",
         "country": "Australia"
       },
-      "date": "2018-04-12T18:25:43.511Z",
+      "date": "2017-05-12 18:25:43.511",
       "members": [
         {
           "firstName": "Quentin",
@@ -62,38 +62,41 @@
         "city": "Milton",
         "country": "Australia"
       },
-      "date": "2018-04-13T18:25:43.511Z",
+      "date": "2017-05-12 18:27:43.511",
       "members": [
         {
           "firstName": "Quentin",
           "lastName": "Lastname",
           "email": "quentin@sc.com.au"
-        },
-        {
-          "firstName": "Geoffroy",
-          "lastName": "Lastname",
-          "email": "geoffroy@sc.com.au"
         }
       ],
       "report": [
         {
           "type": "primary",
-          "content": "L'objet de cette première réunion est de présenter et de définir le projet",
+          "content": "Ecrire la spec",
           "children": []
         },
         {
           "type": "info",
-          "content": "Geoffroy présente le projet et apporte les specifications techniques",
-          "children": [
-            {
-              "type": "question",
-              "content": "Quelle est la deadline de ce projet ?"
-            }
-          ]
+          "content": "La spec sera ecrite avec google docs"
         },
         {
-          "type": "info",
-          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+          "type": "question",
+          "content": "Quelles libs utiliser ?",
+          "children": [
+            {
+              "type": "decision",
+              "content": "Material-ui"
+            },
+            {
+              "type": "decision",
+              "content": "momentJs c'est trop bien pour les dates"
+            },
+            {
+              "type": "info",
+              "content": "react-server servirait a mettre en place un serveur web vite fait"
+            }
+          ]
         }
       ]
     },
@@ -105,37 +108,26 @@
         "city": "Milton",
         "country": "Australia"
       },
-      "date": "2018-04-14T18:25:43.511Z",
+      "date": "2017-05-14 07:25:43.511",
       "members": [
         {
           "firstName": "Quentin",
           "lastName": "Lastname",
           "email": "quentin@sc.com.au"
-        },
-        {
-          "firstName": "Geoffroy",
-          "lastName": "Lastname",
-          "email": "geoffroy@sc.com.au"
         }
       ],
       "report": [
         {
           "type": "primary",
-          "content": "L'objet de cette première réunion est de présenter et de définir le projet"
+          "content": "Coder le projet"
         },
         {
           "type": "info",
-          "content": "Geoffroy présente le projet et apporte les specifications techniques",
-          "children": [
-            {
-              "type": "question",
-              "content": "Quelle est la deadline de ce projet ?"
-            }
-          ]
+          "content": "Une seule journee de dispo"
         },
         {
-          "type": "info",
-          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+          "type": "decision",
+          "content": "au boulot"
         }
       ]
     },
@@ -147,7 +139,7 @@
         "city": "Milton",
         "country": "Australia"
       },
-      "date": "2018-04-15T18:25:43.511Z",
+      "date": "2017-05-15 18:25:43.511",
       "members": [
         {
           "firstName": "Quentin",
@@ -158,26 +150,59 @@
           "firstName": "Geoffroy",
           "lastName": "Lastname",
           "email": "geoffroy@sc.com.au"
+        },
+        {
+          "firstName": "Enguerrand",
+          "lastName": "Lastname",
+          "email": "enguerrand@sc.com.au"
         }
       ],
       "report": [
         {
           "type": "primary",
-          "content": "L'objet de cette première réunion est de présenter et de définir le projet"
+          "content": "Rendu du projet"
         },
         {
           "type": "info",
-          "content": "Geoffroy présente le projet et apporte les specifications techniques",
+          "content": "Le projet est dispo sur github",
           "children": [
             {
               "type": "question",
-              "content": "Quelle est la deadline de ce projet ?"
+              "content": "Quelle url ?"
+            },
+            {
+              "type": "info",
+              "content": "https://github.com/SleepyFanjo/tegona"
             }
           ]
         },
         {
           "type": "info",
-          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+          "content": "filler, test grand nombre d'infos"
+        },
+        {
+          "type": "info",
+          "content": "filler, test grand nombre d'infos"
+        },
+        {
+          "type": "info",
+          "content": "filler, test grand nombre d'infos"
+        },
+        {
+          "type": "info",
+          "content": "filler, test grand nombre d'infos"
+        },
+        {
+          "type": "info",
+          "content": "filler, test grand nombre d'infos"
+        },
+        {
+          "type": "info",
+          "content": "filler, test grand nombre d'infos"
+        },
+        {
+          "type": "info",
+          "content": "filler, test grand nombre d'infos"
         }
       ]
     },
@@ -189,7 +214,7 @@
         "city": "Milton",
         "country": "Australia"
       },
-      "date": "2018-04-16T18:25:43.511Z",
+      "date": "2017-05-20 18:25:43.511",
       "members": [
         {
           "firstName": "Quentin",
@@ -205,21 +230,107 @@
       "report": [
         {
           "type": "primary",
-          "content": "L'objet de cette première réunion est de présenter et de définir le projet"
+          "content": "Filler, test plusieurs reunions"
         },
         {
           "type": "info",
-          "content": "Geoffroy présente le projet et apporte les specifications techniques",
-          "children": [
-            {
-              "type": "question",
-              "content": "Quelle est la deadline de ce projet ?"
-            }
-          ]
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+        }
+      ]
+    },
+    {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe1a77a354",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2017-05-20 18:26:43.511",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "Filler, test plusieurs reunions"
         },
         {
           "type": "info",
-          "content": "Les specifications du projet ont été envoyées par mail aux membres de la réunion"
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+        }
+      ]
+    },
+    {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77b354",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2017-05-20 18:27:43.511",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "Filler, test plusieurs reunions"
+        },
+        {
+          "type": "info",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+        }
+      ]
+    },
+    {
+      "id": "26c7d34c-fcbe-48f9-a241-53fe0c77a354",
+      "location": {
+        "address": "40 Castlemaine St",
+        "postcode": "4064",
+        "city": "Milton",
+        "country": "Australia"
+      },
+      "date": "2017-05-18 18:29:43.511",
+      "members": [
+        {
+          "firstName": "Quentin",
+          "lastName": "Lastname",
+          "email": "quentin@sc.com.au"
+        },
+        {
+          "firstName": "Geoffroy",
+          "lastName": "Lastname",
+          "email": "geoffroy@sc.com.au"
+        }
+      ],
+      "report": [
+        {
+          "type": "primary",
+          "content": "Filler, test plusieurs reunions"
+        },
+        {
+          "type": "info",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
         }
       ]
     }
