@@ -1,0 +1,22 @@
+.project {
+  &-content-wrapper {
+    width: 100%;
+    padding-top: 20px;
+
+    @media (min-width: $tablet) {
+      width: 500px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 600px;
+    }
+  }
+
+  &-title {
+    font-weight: normal;
+  }
+
+  &-meeting-missing {
+    padding: 20px 10px;
+  }
+}

@@ -11,7 +11,7 @@ import { bindActionCreators } from 'redux'
 import * as homeActions from '../modules/Home'
 
 // Components
-import Home from '../components/Home'
+import Home from '../components/home/Home'
 
 class HomeContainer extends Component {
   componentWillMount () {
@@ -33,7 +33,7 @@ class HomeContainer extends Component {
 
   componentDidMount () {
     // This simulate a client side API Call
-    this.props.homeActions.loadApiData()
+    this.props.homeActions.loadApiData(this.props.projectData)
   }
 }
 

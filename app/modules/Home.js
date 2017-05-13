@@ -1,8 +1,5 @@
 import createReducer from '../utils/createReducer'
 
-// fake api data
-import data from '../../api/data.json'
-
 // consts
 import * as appConst from '../utils/constants'
 
@@ -11,10 +8,12 @@ const API_DATA_SUCCESS = 'home/API_DATA_SUCCESS'
 const API_DATA_ERROR = 'home/API_DATA_ERROR'
 const TOGGLE_DRAWER = 'home/TOGGLE_DRAWER'
 const SELECT_MEETINGS = 'home/SELECT_MEETINGS'
+const TOGGLE_DIALOG = 'home/TOGGLE_DIALOG'
 
 const defaultState = {
+  dialog: false,
   filter: appConst.PAST_MEETINGS,
-  drawer: true,
+  drawer: typeof window === 'object' && window.innerWidth > 900,
   project: null,
   loading: false,
   error: null
@@ -40,6 +39,11 @@ export default createReducer(defaultState, {
       loading: false
     })
   },
+  [TOGGLE_DIALOG]: (state) => {
+    return Object.assign({}, state, {
+      dialog: !state.dialog
+    })
+  },
   [TOGGLE_DRAWER]: (state) => {
     return Object.assign({}, state, {
       drawer: !state.drawer
@@ -60,6 +64,14 @@ export function toggleDrawer () {
   }
 }
 
+export function toggleDialog () {
+  return (dispatch) => {
+    dispatch({
+      type: TOGGLE_DIALOG
+    })
+  }
+}
+
 export function updateFilter (filter) {
   return (dispatch) => {
     dispatch({
@@ -69,7 +81,7 @@ export function updateFilter (filter) {
   }
 }
 
-export function loadApiData () {
+export function loadApiData (data) {
   return (dispatch) => {
     dispatch({
       type: API_DATA_LOADING

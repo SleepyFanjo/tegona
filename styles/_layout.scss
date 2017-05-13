@@ -1,10 +1,30 @@
 html, body {
   background-color: $background-color;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 *, :after, :before {
   box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+// Unfortunately material-ui uses inline-styling, so !Important is the only way to override
+.drawer-container {
+  height: calc(100% - 66px) !important;
+  top: 66px !important;
+  box-shadow: none !important;
+
+  @media (min-width: $desktop) {
+    background: transparent !important;
+  }
 }
 
 .title {

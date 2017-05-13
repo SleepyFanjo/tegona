@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 
 // material components
 import AppBar from 'material-ui/AppBar'
-import FlatButton from 'material-ui/FlatButton'
+import Divider from 'material-ui/Divider'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import Previous from 'material-ui/svg-icons/action/check-circle'
 import Future from 'material-ui/svg-icons/action/query-builder'
+import Help from 'material-ui/svg-icons/action/help'
 
 // constants
-import * as appConst from '../utils/constants'
+import * as appConst from '../../utils/constants'
 
 const Layout = (props) => (
   <div className="container">
@@ -21,15 +22,12 @@ const Layout = (props) => (
     />
     <Drawer
       open={props.drawer}
-      containerStyle={{
-        height: 'calc(100% - 66px)',
-        top: 66,
-        background: 'transparent',
-        boxShadow: 'none'
-      }}
+      containerClassName="drawer-container"
     >
       <MenuItem primaryText={appConst.PAST_MEETINGS} leftIcon={<Previous />} onTouchTap={() => props.updateFilter(appConst.PAST_MEETINGS)} />
-      <MenuItem primaryText={appConst.FUTURE_MEETINGS} leftIcon={<Future />} onTouchTap={() => props.updateFilter(appConst.FUTURE_MEETINGS)}/>
+      <MenuItem primaryText={appConst.FUTURE_MEETINGS} leftIcon={<Future />} onTouchTap={() => props.updateFilter(appConst.FUTURE_MEETINGS)} />
+      <Divider />
+      <MenuItem primaryText="Project Details" leftIcon={<Help />} onTouchTap={props.displayDetails} />
     </Drawer>
     {
       props.children

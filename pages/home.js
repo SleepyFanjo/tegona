@@ -4,6 +4,8 @@ import { RootProvider } from 'react-server-redux'
 import HomeContainer from '../app/containers/HomeContainer'
 import store from '../app/stores/configureStore'
 
+import data from '../api/data.json'
+
 // styles
 import '../styles/main.scss'
 
@@ -18,7 +20,7 @@ export default class Home {
     return [
       <RootProvider store={store}>
         <RootElement>
-          <HomeContainer userAgent={this.userAgent} />
+          <HomeContainer projectData={data} userAgent={this.userAgent} />
         </RootElement>
       </RootProvider>
     ]
