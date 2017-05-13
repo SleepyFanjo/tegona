@@ -36,7 +36,9 @@ export default class Home extends Component
               filter={this.props.filter}
               dialog={this.props.dialog}
               closeDialog={this.props.homeActions.toggleDialog}
+              meetingId={this.props.meetingId}
               selectMeeting={this.props.homeActions.selectMeeting}
+              unselectMeeting={this.props.homeActions.unselectMeeting}
             />
             : <Snackbar open message="No reports available on this project" />
         }

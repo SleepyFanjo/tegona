@@ -30,7 +30,7 @@
       "report": [
         {
           "type": "primary",
-          "content": "L'objet de cette première réunion est de présenter et de définir le projet"
+          "content": "L'objet de cette réunion est de présenter et de définir le projet"
         },
         {
           "type": "info",
@@ -38,7 +38,13 @@
           "children": [
             {
               "type": "question",
-              "content": "Quelle est la deadline de ce projet ?"
+              "content": "Quelle est la deadline de ce projet ?",
+              "children": [
+                {
+                  "type": "decision",
+                  "content": "Lundi"
+                }
+              ]
             }
           ]
         },

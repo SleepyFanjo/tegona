@@ -19,6 +19,7 @@ import * as appConst from '../../utils/constants'
 
 // components
 import Meetings from './Meetings'
+import MeetingReport from './MeetingReport'
 
 export default class Project extends Component {
   static propTypes = {
@@ -82,6 +83,7 @@ export default class Project extends Component {
             ? <Meetings meetings={meetings} filter={this.props.filter} selectMeeting={this.props.selectMeeting} />
             : <Paper className="project-meeting-missing" zDepth={2}>Il n'y a pas de rapport disponible pour ce projet</Paper>
         }
+        <MeetingReport meetings={project.meetings} meetingId={this.props.meetingId} close={this.props.unselectMeeting} />
         <Dialog
           title={project.name}
           actions={actions}
