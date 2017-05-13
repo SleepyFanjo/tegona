@@ -79,7 +79,7 @@ export default class Project extends Component {
         </p>
         {
           meetings && meetings.length
-            ? <Meetings meetings={meetings} filter={this.props.filter} />
+            ? <Meetings meetings={meetings} filter={this.props.filter} selectMeeting={this.props.selectMeeting} />
             : <Paper className="project-meeting-missing" zDepth={2}>Il n'y a pas de rapport disponible pour ce projet</Paper>
         }
         <Dialog

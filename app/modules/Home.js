@@ -7,10 +7,13 @@ const API_DATA_LOADING = 'home/API_DATA_LOADING'
 const API_DATA_SUCCESS = 'home/API_DATA_SUCCESS'
 const API_DATA_ERROR = 'home/API_DATA_ERROR'
 const TOGGLE_DRAWER = 'home/TOGGLE_DRAWER'
-const SELECT_MEETINGS = 'home/SELECT_MEETINGS'
+const FILTER_MEETINGS = 'home/FILTER_MEETINGS'
 const TOGGLE_DIALOG = 'home/TOGGLE_DIALOG'
+const SELECT_MEETING = 'home/SELECT_MEETING'
+const UNSELECT_MEETING = 'home/UNSELECT_MEETING'
 
 const defaultState = {
+  meetingId: null,
   dialog: false,
   filter: appConst.PAST_MEETINGS,
   drawer: typeof window === 'object' && window.innerWidth > 900,
@@ -49,12 +52,39 @@ export default createReducer(defaultState, {
       drawer: !state.drawer
     })
   },
-  [SELECT_MEETINGS]: (state, action) => {
+  [FILTER_MEETINGS]: (state, action) => {
     return Object.assign({}, state, {
       filter: action.filter
     })
+  },
+  [SELECT_MEETING]: (state, action) => {
+    return Object.assign({}, state, {
+      meetingId: action.meeting
+    })
+  },
+  [UNSELECT_MEETING]: (state) => {
+    return Object.assign({}, state, {
+      meetingId: null
+    })
   }
 })
+
+export function selectMeeting (meeting) {
+  return (dispatch) => {
+    dispatch({
+      type: SELECT_MEETING,
+      meeting
+    })
+  }
+}
+
+export function unselectMeeting () {
+  return (dispatch) => {
+    dispatch({
+      type: UNSELECT_MEETING
+    })
+  }
+}
 
 export function toggleDrawer () {
   return (dispatch) => {
@@ -75,7 +105,7 @@ export function toggleDialog () {
 export function updateFilter (filter) {
   return (dispatch) => {
     dispatch({
-      type: SELECT_MEETINGS,
+      type: FILTER_MEETINGS,
       filter
     })
   }

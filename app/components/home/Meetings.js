@@ -39,7 +39,7 @@ const MeetingCard = (props) => {
         }
       </List>
       <CardActions>
-        <RaisedButton label="Plus d'infos" secondary />
+        <RaisedButton label="Plus d'infos" secondary onTouchTap={() => props.selectMeeting(props.card.id)}/>
       </CardActions>
     </Card>
   )
@@ -84,7 +84,7 @@ export default class Meetings extends Component {
     return (
       <div className="project-meetings">
         <h3 className="project-meeting-category-title">{wording.primary}</h3>
-        <MeetingCard card={primary} index={0} />
+        <MeetingCard card={primary} selectMeeting={this.props.selectMeeting} />
         <h3 className="project-meeting-category-title">{wording.secondary}</h3>
         <GridList
           cols={this.state.cols}
@@ -105,7 +105,7 @@ export default class Meetings extends Component {
                   cols={size}
                   rows={size}
                 >
-                  <MeetingCard card={meeting} index={index + 1} />
+                  <MeetingCard card={meeting} selectMeeting={this.props.selectMeeting} />
                 </GridTile>
               )
             })

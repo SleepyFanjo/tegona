@@ -31,7 +31,13 @@ export default class Home extends Component
           this.props.loading
             ? <div className="centered-indicator"><RefreshIndicator size={100} left={10} top={0} status="loading" /></div>
             : this.props.project
-            ? <Project project={this.props.project} filter={this.props.filter} dialog={this.props.dialog} closeDialog={this.props.homeActions.toggleDialog} />
+            ? <Project
+              project={this.props.project}
+              filter={this.props.filter}
+              dialog={this.props.dialog}
+              closeDialog={this.props.homeActions.toggleDialog}
+              selectMeeting={this.props.homeActions.selectMeeting}
+            />
             : <Snackbar open message="No reports available on this project" />
         }
       </Layout>

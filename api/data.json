@@ -7,6 +7,7 @@
   "status": "En cours",
   "meetings": [
     {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a350",
       "location": {
         "address": "40 Castlemaine St",
         "postcode": "4064",
@@ -48,6 +49,7 @@
       ]
     },
     {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a351",
       "location": {
         "address": "40 Castlemaine St",
         "postcode": "4064",
@@ -90,6 +92,7 @@
       ]
     },
     {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a352",
       "location": {
         "address": "40 Castlemaine St",
         "postcode": "4064",
@@ -131,6 +134,7 @@
       ]
     },
     {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a353",
       "location": {
         "address": "40 Castlemaine St",
         "postcode": "4064",
@@ -172,6 +176,7 @@
       ]
     },
     {
+      "id": "26c7d34c-fcbe-48f9-a231-53fe0a77a354",
       "location": {
         "address": "40 Castlemaine St",
         "postcode": "4064",
