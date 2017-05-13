@@ -39,7 +39,6 @@ const getReportItem = (info, key, inset) => {
 
 const Report = (props) => {
   const report = props.meeting.report
-  console.log(report)
 
   if (!report || report.length <= 0) {
     return <span>There is no reports available for this meeting yet</span>
