@@ -17,7 +17,11 @@ const MeetingCard = (props) => {
   const primaryInfo = props.card.report.find((info) => info.type === 'primary')
 
   return (
-    <Card>
+    <Card
+      style={{
+        height: '100%'
+      }}
+    >
       <CardHeader
         title={moment(props.card.date).format('D MMM YYYY, H:mm')}
         subtitle={Meetings.renderLocationString(props.card.location)}
