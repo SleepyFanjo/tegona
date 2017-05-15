@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // material-ui dependencies
-import injectTapEventPlugin from 'react-tap-event-plugin'
+import injectTapEventPlugin from '../utils/react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 

@@ -4,7 +4,7 @@
   "description": "A react-server instance",
   "main": "HelloWorld.js",
   "scripts": {
-    "start": "react-server start",
+    "start": "react-server start --host $REACT_SERVER_HOST",
     "lint": "eslint test.js pages",
     "test": "npm run lint && nsp check && ava test.js"
   },
